@@ -1,0 +1,128 @@
+class Movie{
+    constructor(name,studio,rating="PG")
+    {
+        this.name = name;
+        this.studio =studio;
+        this.rating = rating;
+    }
+}
+function getMovie(temp){
+    var s=[];
+    for( i=0;i<temp.length;i++){
+        if(temp[i].rating==="PG")
+            s.push(temp[i].name);
+            else
+            s.push(temp[i]);
+            
+    }
+    return s;
+}
+
+let m1=new Movie("RRR","RAJAMOULI","PG");
+let m2=new Movie("SPIDERR","DC","PG");
+let m3=new Movie("CASINOROYLE","EON","PG13");
+var arr=[m1,m2,m3];
+console.log(getMovie(arr))
+
+O/P:
+RRR,SPIDER
+NAME:"CASINOROYLE",STUDIO:"EON",RATING:"PG13"
+
+2.
+const pi=(22/7);
+class circle{ 
+    
+        constructor(type1,type2)  
+               {             this.type1 = type1;    
+                            this.type2 = type2;       
+               }              
+              getsting() {
+                  
+                  var string=`circle[${this.type1},${this.type2}]`
+                              return string;   
+                   }
+                getarea() {
+                    var area=pi*Math.pow(this.type1,2);
+                    return area;
+
+                }
+                getcircumference() {
+                    var circumference=2*pi*this.type1;
+                    return circumference;
+
+                }} ;
+                 var circle1 = new circle(1.0,"red");  
+                    console.log(circle1.getsting());
+                    console.log(circle1.getarea());
+                    console.log(circle1.getcircumference());
+
+O/P: circle[1,red]
+3.142857142857143
+6.285714285714286
+
+3. 
+class Person{
+    constructor(name,age,study,occupation,salary,area,brother){
+        this.name = name;
+        this.age = age;
+        this.study = study;
+        this.occupation = occupation;
+        this.salary = salary;
+        this.area = area;
+        this.brother = brother;
+    }
+
+getperson()
+{
+    let data=`name:${this.name}
+    age:${this.age}
+    study:${this.study}
+    occupation:${this.occupation}
+    salary:${this.salary}
+    area:${this.area}
+    relatives:${this.brother}`;
+     return data;
+}
+};
+var person1 = new Person("radhaiah",24,"B=TECH","relation ship manager",20000,"guntur","venkatesh")
+console.log(person1.getperson());
+
+O/P:name:radhaiah
+    age:24
+    study:B=TECH
+    occupation:relation ship manager
+    salary:20000
+    area:guntur
+    relatives:venkatesh
+
+4create a class to calculate the uber prices
+
+class uber{ 
+            constructor(type1,type2)  
+               {             this.type1 = type1;    
+                            this.type2 = type2;       
+               }              
+              getprice() {
+                  if(this.type1=="suden")
+                  {
+                  var temp=this.type2*10
+                              return temp;   
+                                         }
+                    else if(this.type1=="go")
+                { 
+                    var temp=this.type2*15;
+                    return temp;
+                }
+            else if(this.type1=="suv")
+        {
+            var temp=this.type2*20;
+            return temp;
+        }}} ;
+                 var uber1 = new uber("suden",24); 
+                   var uber2 = new uber("go",24);   
+                   var uber3 = new uber("suv",24); 
+                    console.log(uber1.getprice());
+                     console.log(uber2.getprice());
+                     console.log(uber3.getprice());
+
+O/P: 240,360,480
